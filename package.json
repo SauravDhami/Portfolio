@@ -1,0 +1,26 @@
+{
+  "name": "MimicUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "surge --project ./ --domain ramesh123.surge.sh"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "npm run upload"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SauravDhami/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SauravDhami/Portfolio/issues"
+  },
+  "homepage": "https://github.com/SauravDhami/Portfolio#readme"
+}
