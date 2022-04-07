@@ -2,7 +2,109 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  
+}
+
+
+/* dar theme */
+html {
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  height: 100%;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: none;
+  background-color: var(--bg-color);
+  top: 150px;
+}
+
+:root {
+
+  --font-color: #0f0f0f;
+  --bg-color: #fefefe;
+
+}
+
+[data-theme="dark"] {
+
+  --font-color: #fefefe;
+  --bg-color: #121212;
+}
+
+li {
+  float: right;
+  padding: 10px 20px;
+}
+
+h2{
+  color:var(--font-color);
+}
+
+.switch{
+  position: relative;
+}
+
+
+  
+.theme-switch {
+display: inline-block;
+top: 5px;
+height: 26px;
+position: absolute;
+width: 54px;
+}
+
+.theme-switch input {
+display:none;
+}
+
+.slider {
+background-color: #ccc;
+bottom: 0;
+cursor: pointer;
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 6px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+}
+
+input:checked + .slider {
+background-color: #2b2b2b;
+}
+
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+#heroPage{
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden !important;
+  margin-top: 5vh;
 }
 
 .dark{
@@ -10,70 +112,11 @@
   color: #e6e6e6;
 }
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.slider.round {
-  border-radius: 24px;
-}
-
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(80, 137, 241);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.heading {
+/* .heading {
   height: 10vh;
-  margin-top: 5vh;
-}
+  justify-content: space-between;
+} */
 nav {
   display: flex;
   justify-content: space-between;
@@ -82,7 +125,7 @@ nav {
 
 div nav p {
   color: blueviolet;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   font-size: 30px;
 }
 
@@ -93,58 +136,68 @@ div nav ul {
   padding-right: 15vh;
 }
 
-li {
-  float: right;
-  padding: 10px 20px;
-}
 
 li a {
-  color: black;
+  color:var(--font-color);
   text-decoration: none;
 }
 
-.button {
-  width: 70px;
-  height: 30px;
-  background-color: blueviolet;
+
+.btn1 a {
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--font-color);
+  background-color: rgb(70, 70, 201);
+
 }
 
-.body {
-  height: 70vh;
-  padding-top: 10vh;
-  padding-left: 15vh;
-  margin: 0px;
-  height: 100vh;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+
+.btn1 a:hover{
+  background-color: #3e8e41;
+  color: rgb(92, 11, 11);
 }
 
-/* *{
-    box-sizing: border-box;
-  } */
+.heading a:hover{
+  visibility: inherit;
+  background-size: auto;
+  background-color: #a6ade4;
+  color: #000000;
+}
+
 
 .row1 {
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex;
+  justify-content: flex-start; */
   height: 90vh;
   margin: 0px;
+  padding-top: 10vh;
+  padding-left: 15vh;
+  font-family: sans-serif;
+    position: relative;
+  overflow: hidden;
 }
 
 .column1 {
-  float: left;
+
+  color:var(--font-color);
+  
   width: 35%;
   padding: 10px;
   margin: 0px;
   margin-left: 0px;
   margin-top: 10vh;
   padding-left: 0px;
+  overflow: hidden;
+  position: absolute;
 }
 
 .column1 h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   font-size: 80px;
   margin-left: 0px;
-  color: purple
+  color: rgb(68, 75, 139)
 }
 
 .column1 p{
@@ -153,21 +206,8 @@ li a {
     margin-bottom: 20px;
 }
 
-.button{
-    background: #7562e0;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: none;
-}
 
-/* .column2 {
-  float: left;
-  width: 60%;
-  padding: 0px;
-  height: 100vh;
-  background-position: 80%;
-  margin: 0px;
-} */
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -187,13 +227,99 @@ li a {
   width: 100vw;
   background-position: 70% 10%;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .rightCircle {
-  background-color: blue;
+  background-color: rgb(21, 57, 78);
   height: 100vh;
   width: 70vw;
   border-radius: 50%;
   margin-left: 750px;
   position: absolute;
-  /* overflow: hidden; */
+  
 }
+
+/* projects */
+
+
+#projects{
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden !important;
+}
+
+#projects h2{
+  text-align: center;
+  font-size:2rem;
+}
+
+.cards{
+  color:var(--font-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2.5rem;
+  padding-left: 10%;
+  padding-right: 8%;
+  margin-top: 5px;
+
+
+}
+.card{
+  box-shadow: 0 0 5px rgba(37, 35, 35, 0.1);
+  min-height: 90vh;
+}
+.card img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  border-radius: 50px;
+  background-color: rgb(65, 63, 109);
+}
+
+.card-title h2{
+  text-align: center;
+  font-family: sans-serif;
+  background-color: rgb(106, 109, 241);
+  border-radius: 25px;
+    margin: 0px;
+    padding: 0px;
+    height: 77px;
+    box-sizing: border-box;
+}
+
+.card-info{
+  margin-top: 10px;
+  height: 6vh;
+  width: auto;
+  text-align: center;
+}
+
+
+}
+.card-footer{
+  height: 7vh;
+  top: 3vh;
+  padding-top: 14px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+
+.card-footer a{
+  background-color: #7562D7;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 10px 10px;
+  /* margin: 0 20px; */
+  margin-left: 120px;
+  font-family: sans-serif;
+  position: relative;
+}
+.card-footer a:hover{
+  background-color: white;
+  color: #7562D7;
+
+}
+
