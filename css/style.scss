@@ -146,17 +146,23 @@ nav img {
 }
 
 #logo img{
-  margin-left: -50vh;
-  height: 15vh;
-  width: 15vh;
+  position: absolute;
+  margin-left: -26.5%;
+  height: 13%;
+  width: 10%;
 
 }
-.ball{
+
+.leftCircle{
   position: absolute;
-  margin-left: -30vh;
-  margin-top: 10vh;
-  opacity: .5;
+  margin-left: -28vh;
+  margin-top: 6vh;
+  background-color: rgb(21, 57, 78);
+  height: 25vh;
+  width: 25vh;
+  border-radius: 50%;
 }
+
 div nav p {
   color: blueviolet;
   font-family: sans-serif;
@@ -233,25 +239,25 @@ a:hover {
 .row1 {
   /* display: flex;
   justify-content: flex-start; */
+  display: flex;
   height: 90vh;
-  margin: 0px;
   padding-top: 10vh;
   padding-left: 15vh;
   font-family: sans-serif;
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
 }
 
 .column1 {
 
-  color:var(--font-color);
-  
+  color: var(--font-color);
   width: 35%;
   padding: 10px;
-  margin: 0px;
-  margin-left: 0px;
+  margin: 0;
+  margin-left: 8vh;
   margin-top: 10vh;
-  padding-left: 0px;
+  padding-left: 5vh;
   overflow: hidden;
   position: absolute;
 }
@@ -280,28 +286,42 @@ a:hover {
 }
 
 .column2 {
- 
   position: absolute;
-  top: 10vh;
-  left: -10vh;
-  background-image:url(../images/hero.png);
-  display: none;
-  background-size: contain;
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  background-position: 70% 10%;
-  background-repeat: no-repeat;
-  overflow: hidden;
+    top: 22%;
+    left: 45%;
+    background-image: url(../images/hero.png);
+    display: none;
+    background-size: auto;
+    z-index: 1;
+    height: 80%;
+    width: 28%;
+    background-position: 15% 10%;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 .rightCircle {
   background-color: rgb(21, 57, 78);
-  height: 100vh;
-  width: 70vw;
+  height: 105vh;
+  width: 76vw;
   border-radius: 50%;
-  margin-left: 750px;
+  margin-left: 100vh;
   position: absolute;
   
+}
+
+.socialmedia{
+  position: absolute;
+  left: 80%;
+  top:55%;
+  justify-content: center;
+  display: grid;
+  grid-gap: 40%;
+}
+
+.socialmedia div{
+  font-size: 2rem;
+  text-decoration: none;
+  justify-content: center;
 }
 
 /* projects */
