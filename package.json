@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "upload": "surge --project ./ --domain ramesh123.surge.sh"
+    "upload": "surge --project ./ --domain ramesh123.surge.sh",
+    "sass" : "sass css/style.scss css/style.css --watch",
+    "start": "npx concurrently live-server "
   },
   "pre-push": [
     "upload"

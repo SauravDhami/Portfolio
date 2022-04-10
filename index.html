@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Document</title>
 </head>
 
@@ -17,7 +21,7 @@
             <div class="ball">
             <img src="./images/football.png" alt="football">
             </div>
-            <div class="logo">
+            <div id="logo">
                 <img src="./images/logoBlue.png" alt="football">
             </div>
         <ul>
@@ -27,9 +31,10 @@
                     <div class="slider round"></div>
                 </label>
            </li>
-            <li><a href="contact">Contact</a></li>
-            <li><a href="#projects"> Projects</a></li>
-            <li><a href="index.html">Home</a></li>
+           
+            <li id="navbar"><a href="#contact">Contact</a></li>
+            <li id="navbar"><a href="#projects"> Projects</a></li>
+            <li id="navbar"><a href="index.html">Home</a></li>
           
         </ul>
         </nav>
@@ -42,7 +47,16 @@
 
         <div class="column1">
             <h1>Saurav </h1> <br/> <h1> Dhami</h1>
-            <p>Dev of Visual Product Designer and <br>based in Yogyakarta, Indonesia</p>
+            <p>Dev of Visual Product Designer and <br>based in Yogyakarta, Indonesia
+            Buddha was born in Nepal.
+            Sita was born in Nepal.
+            My name is saurav.
+            Water is colorless.
+            Buddha was born in Nepal.
+            Sita was born in Nepal.
+            My name is saurav.
+            Water is colorless.
+        </p>
     
         <div class="btn1">
                  <a href="mailto:saugatdhami88@gmail.com">Hire Me</a>
@@ -108,6 +122,30 @@
     </div>
 
 </section>
+
+<section id="contact">
+    <h1>Contact Details</h1>
+
+    <div class="container1">
+        <div class="insta"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>  Instagram</div>
+        <div class="dribble"> <i class="fa fa-dribbble fa-lg" aria-hidden="true"></i>  Dribble</div>
+        <div class="behance"><i class="fa fa-behance fa-lg" aria-hidden="true">Behance</i></div>
+       <div class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i>Address</div>
+       <div class="mail"> <i class="fa fa-envelope-o" aria-hidden="true"></i></i>Mail</div>
+    </div>
+
+    <div class="container2">
+        <h2>Contact Me</h2>
+        <form action="" onsubmit="submitfunction()">
+            <input type="email" name="email" id="email" placeholder="Enter your email" required >
+            <input type="text" name="name" id="name" placeholder=" enter your name"required >
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+   
+
+</section>
    
 
 </body>
@@ -120,13 +158,16 @@ if (currentTheme) {
   
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
+        document.getElementById('logo').src="images/logoRed.png";
     }
 }
 
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('logo').src="images/logoRed.png";
         localStorage.setItem('theme', 'dark');
+        
     }
     else {        document.documentElement.setAttribute('data-theme', 'light');
           localStorage.setItem('theme', 'light');
@@ -134,5 +175,9 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+function submitfunction(){
+    alert("Your request have been submitted!!!")
+}
 </script>
 </html>
